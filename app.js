@@ -45,7 +45,7 @@ app.get("/res",(req,res)=>{
 })
 
 app.post("/res",(req,res)=>{
-   
+    res.sendFile(__dirname+"/res.html");
 })
 app.listen(process.env.PORT||3000,()=>{
     console.log('listening to port 3000');
