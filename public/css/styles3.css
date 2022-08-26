@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to bottom right,white,skyblue 120%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    overflow: hidden;
+}
+img{
+    width: 55%;
+    border-radius: 9px;
+}
+@media (max-width:600px) {
+    img{
+        width: 90%;
+    }
+}

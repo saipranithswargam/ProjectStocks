@@ -1,0 +1,136 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-image: linear-gradient(to bottom right,white,skyblue 120%);
+  padding: 2.5% 5%;
+  overflow: hidden;
+}
+
+.navbar-toggler {
+  border-color: rgb(132, 137, 141);
+}
+.navbar-toggler-icon {
+  background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(162, 169, 176)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar{
+  background-color: transparent;
+  padding: 0;
+
+}
+.brand{
+  font-family: 'BioRhyme', serif;
+  font-weight: 900;
+  font-size: xx-large;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 100ms;
+}
+.brand:hover{
+  color: black;
+}
+.nav-link{
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+.nav-link:hover{
+  font-weight: 900;
+  color: rgb(40, 39, 39);
+}
+.btn{
+  border:2px solid rgb(93, 102, 111);
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: 500;
+  align-self: flex-start !important;
+}
+.btn:hover,btn:active{
+  background-color:rgb(47, 45, 45) ;
+  color: #fff;
+  font-weight: 700;
+}
+.crd-bg{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crd{
+  width: 60%;
+  height: 70%;
+  border-radius: 10px;
+  border:2px solid rgb(163, 167, 171);
+  box-shadow: 10px 5px 5px slategray;
+}
+.crd h1{
+  font-family: 'BioRhyme', serif;
+  font-weight: 900;
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 4%;
+}
+.frm{
+  margin-top: 8%;
+  display: flex;
+  height: 40%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+.bx{
+  display: block;
+  margin-bottom: 23%;
+  border-radius: 7px;
+  padding: 2% 6%;
+}
+.bt{
+  display: inline-block;
+}
+@media (max-width:520px){
+  .crd{
+    width: 100%;
+  }
+  .frm{
+    margin-top: 20%;
+  }
+  .trial{
+    margin-top: 10% !important;
+  }
+}
+
+@keyframes blink{
+   0%{
+      opacity: 0;
+   }
+   50%{
+      opacity: 0.5;;
+   }
+   60%{
+      opacity: 0;
+   }
+   70%{
+      opacity: 0.6;
+   }
+   80%{
+      opacity: 0;
+   }
+   90%{
+      opacity: 0.7;
+   }
+   95%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
