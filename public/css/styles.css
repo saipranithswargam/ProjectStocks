@@ -206,6 +206,10 @@ body{
     .cht{
         margin:5% 0;
     }
+    .nav-link:hover{
+        transition: none !important;
+        transform: none !important;
+    }
 }
 @media (max-width:435px) {
     .intro h1, .intro p{
@@ -223,5 +227,9 @@ body{
     .intro p{
         margin-bottom: 2%;
         font-size: small;
+    }
+    .nav-link:hover{
+        transition: none !important;
+        transform: none !important;
     }
 }

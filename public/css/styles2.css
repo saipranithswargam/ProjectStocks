@@ -106,6 +106,10 @@ body{
   .trial{
     margin-top: 10% !important;
   }
+  .nav-link:hover{
+    transition: none !important;
+    transform: none !important;
+}
 }
 
 @keyframes blink{
