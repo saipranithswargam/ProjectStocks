@@ -58,7 +58,7 @@
               class="nav-link transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110"
               href="#"
               >Disabled</a
-              >
+            >
           </li>
         </ul>
       </div>
@@ -66,32 +66,36 @@
     <div class="crd-bg">
       <div class="crd">
         <h1 class="animate-bounce trial">Begin Analysis</h1>
-      <div class="frm"> 
-        <form method="post" action="/res">
-          <input
-            type="text"
-            placeholder="Company Name"
-            name="company"
-            style="display: block"
-            class="bx"
-            autocomplete="off"
-          />
-          <input
-            type="text"
-            placeholder="today/month/week"
-            name="option"
-            class="bx"
-            autocomplete="off"
-          />
-          <button
-            class="bt btn animate-pulse transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:animate-none"
-            type="submit"
-          >
-            Checknow
-          </button>
-        </form>
+        <p class="nte">
+          Instruction:-Type the symbol of company in bracket in auto suggestion
+        </p>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-6 m-auto">
+              <h3 class="text-center mb-3"></h3>
+              <form class="form-group frm" action="/res" method="post">
+                <input
+                  type="text"
+                  id="search"
+                  name="symbol"
+                  autocomplete="off"
+                  class="form-control form-control-lg"
+                  placeholder="company" 
+                />
+                <button
+                  class="bt btn animate-pulse transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:animate-none"
+                  type="submit"
+                >
+                  Checknow
+                </button>
+              </form>
+              <div id="match-list"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="test.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

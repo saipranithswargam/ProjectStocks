@@ -8,6 +8,7 @@ body{
   height: 100vh;
   background-image: linear-gradient(to bottom right,white,skyblue 120%);
   padding: 2.5% 5%;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -85,13 +86,18 @@ body{
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 1%;
   
+}
+.nte{
+  text-align: center;
+  font-weight: 600;
 }
 .bx{
   display: block;
   margin-bottom: 23%;
   border-radius: 7px;
-  padding: 2% 6%;
+  padding: 4% 5%;
 }
 .bt{
   display: inline-block;

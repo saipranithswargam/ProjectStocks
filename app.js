@@ -25,7 +25,14 @@ app.get('/',(req,res)=>{
 })
 
 app.post("/",(req,res)=>{
-    axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=${apikey}`).then((response)=>{
+
+    res.sendFile(__dirname+"/query.html");
+
+    })
+
+app.post("/res",(req,res)=>{
+    const Sym = req.body.symbol;
+    axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=${Sym}&apikey=${apikey}`).then((response)=>{
         const d = response.data;
         const k = Object.keys(d);
         const l = response.data[k[1]];
@@ -36,16 +43,8 @@ app.post("/",(req,res)=>{
         kes.forEach(element => {
             vals.push(obj[element]);
         });
-        res.sendFile(__dirname+"/query.html");
+    res.render("data",{vals:vals,list:kes});
     })
-    })
-
-app.get("/res",(req,res)=>{
-    res.sendFile(__dirname+"/res.html");
-})
-
-app.post("/res",(req,res)=>{
-    res.sendFile(__dirname+"/res.html");
 })
 app.listen(process.env.PORT||3000,()=>{
     console.log('listening to port 3000');
