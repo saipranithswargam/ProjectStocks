@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar-toggler {
+    border-color: rgb(132, 137, 141);
+  }
+  .navbar-toggler-icon {
+    background-image: url(
+  "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(162, 169, 176)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  .navbar{
+    background-color: transparent;
+    padding: 0;
+  
+  }
+  .brand{
+    font-family: 'BioRhyme', serif;
+    font-weight: 900;
+    font-size: xx-large;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 100ms;
+  }
+  .brand:hover{
+    color: black;
+  }
+  .nav-link{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: medium;
+  }
+  .nav-link:hover{
+    font-weight: 900;
+    color: rgb(40, 39, 39);
+  }
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,white,skyblue 120%);
+    padding: 2.5% 5%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+}
+.align{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    font-family: 'BioRhyme', serif;
+    margin-bottom: 4%;
+    font-size: x-large;
+    text-align: center;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    border:2px solid rgb(163, 167, 171);
+    box-shadow: 10px 5px 5px slategray;
+    margin-bottom: 8%;
+    padding: 0 5%;
+}
+.ver{
+    display: flex;
+    gap: 3%;
+    margin-top: 5%;
+}
+.ele{
+    margin-bottom: 5%;
+    font-size: large;
+    text-align: left;
+
+}
+.ele:last-child{
+    font-size: medium;
+}
+.val{
+    margin-bottom: 10%;
+}
+
+@media (max-width:500px) {
+    .main{
+        width: 95%;
+    }
+}
+@keyframes blink{
+    0%{
+       opacity: 0;
+    }
+    50%{
+       opacity: 0.5;;
+    }
+    60%{
+       opacity: 0;
+    }
+    70%{
+       opacity: 0.6;
+    }
+    80%{
+       opacity: 0;
+    }
+    90%{
+       opacity: 0.7;
+    }
+    95%{
+       opacity: 0;
+    }
+    100%{
+       opacity: 1;
+    }
+ }

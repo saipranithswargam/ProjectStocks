@@ -13,6 +13,7 @@ body{
 
 .navbar-toggler {
     border-color: rgb(132, 137, 141);
+    outline: none!important;
 }
 .navbar-toggler-icon {
     background-image: url(
@@ -98,6 +99,7 @@ body{
     background-color:rgb(47, 45, 45) ;
     color: #fff;
     font-weight: 700;
+
 }
 
 @keyframes moveInLeft{ /*here orange coloured name is given by us wch we will add to the components that we make */

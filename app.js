@@ -30,6 +30,14 @@ app.post("/",(req,res)=>{
 
     })
 
+app.get("/query",(req,res)=>{
+    res.sendFile(__dirname+"/query.html");
+})
+
+app.get("/contact",(req,res)=>{
+    res.send("page under construction");
+})
+
 app.post("/res",(req,res)=>{
     const Sym = req.body.symbol;
     axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=${Sym}&apikey=${apikey}`).then((response)=>{

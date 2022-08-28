@@ -50705,8 +50705,6 @@ const searchStates = searchText => {
 
   const d = JSON.stringify(data);
   const states = JSON.parse(d);
-  //get matches to current input
-
    let matches = states.filter(state=>{
     const regx = new RegExp(`^${searchText}`,'gi');//^means that it should start with search text and gi means case insensitive;
     return state.name.match(regx);
@@ -50719,7 +50717,6 @@ const searchStates = searchText => {
    outputHtml(matches);
 }
 //showing results in html
-
 const outputHtml = matches =>{
     let i = 0;
   if(matches.length>0 && i<10 ){
@@ -50730,8 +50727,6 @@ const outputHtml = matches =>{
     ` ).join('');
     matchList.innerHTML = html;
   }
-
 }
-
 search.addEventListener('input',()=>
   searchStates(search.value))  

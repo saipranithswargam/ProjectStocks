@@ -8,8 +8,8 @@ body{
   height: 100vh;
   background-image: linear-gradient(to bottom right,white,skyblue 120%);
   padding: 2.5% 5%;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  /* background-repeat: no-repeat; */
+  /* overflow: hidden; */
 }
 
 .navbar-toggler {
@@ -51,7 +51,8 @@ body{
   font-family: 'Roboto', sans-serif;
   color: black;
   font-weight: 500;
-  align-self: flex-start !important;
+  align-self: flex-end !important;
+   padding: 2% 4%;
 }
 .btn:hover,btn:active{
   background-color:rgb(47, 45, 45) ;
