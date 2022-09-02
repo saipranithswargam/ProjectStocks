@@ -2,6 +2,9 @@ require('dotenv').config();
 
 const express = require('express');
 
+const app = express();
+
+
 const bodyParser = require('body-parser');
 
 const ejs = require('ejs');
@@ -19,7 +22,7 @@ const Review = mongoose.model("review",ReviewSchema);
 
 const apikey = process.env.API_KEY;
 
-const app = express();
+
 
 const axios = require('axios');
 
@@ -72,7 +75,7 @@ app.post("/review",(req,res)=>{
     })
     if(req.body.name=="" || req.body.review==""){
         res.send("please fill both the feilds");
-        
+
     }
     else{
     rev.save().then((data)=>{
@@ -85,6 +88,6 @@ app.post("/review",(req,res)=>{
 }
 })
 
-app.listen(process.env.PORT||1000,()=>{
+app.listen(process.env.PORT||3000,()=>{
     console.log('listening to port 3000');
 })
