@@ -1,11 +1,21 @@
+require('dotenv').config();
+
 const express = require('express');
 
 const bodyParser = require('body-parser');
 
 const ejs = require('ejs');
 
-require('dotenv').config();
+const mongoose = require('mongoose');
 
+mongoose.connect("mongodb+srv://saipranith:HaFkUhxKJsTELFRK@cluster0.htyqh.mongodb.net/ReviewDB");
+
+const ReviewSchema = {
+    name:{type:String,required:true},
+    review:{type:String,required:true},
+};
+
+const Review = mongoose.model("review",ReviewSchema);
 
 const apikey = process.env.API_KEY;
 
@@ -35,7 +45,7 @@ app.get("/query",(req,res)=>{
 })
 
 app.get("/contact",(req,res)=>{
-    res.send("page under construction");
+    res.sendFile(__dirname+"/contact.html");
 })
 
 app.post("/res",(req,res)=>{
@@ -54,6 +64,27 @@ app.post("/res",(req,res)=>{
     res.render("data",{vals:vals,list:kes});
     })
 })
-app.listen(process.env.PORT||3000,()=>{
+
+app.post("/review",(req,res)=>{
+    const rev = new Review({
+        name:req.body.name,
+        review:req.body.review,
+    })
+    if(req.body.name=="" || req.body.review==""){
+        res.send("please fill both the feilds");
+        
+    }
+    else{
+    rev.save().then((data)=>{
+        res.sendFile(__dirname+"/review.html");
+    })
+    .catch((err)=>{
+        res.send("");
+    })
+    res.sendFile(__dirname+"/review.html");
+}
+})
+
+app.listen(process.env.PORT||1000,()=>{
     console.log('listening to port 3000');
 })

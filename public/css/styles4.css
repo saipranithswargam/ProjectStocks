@@ -6,6 +6,7 @@
 
 .navbar-toggler {
     border-color: rgb(132, 137, 141);
+    outline: none!important;
   }
   .navbar-toggler-icon {
     background-image: url(
@@ -15,6 +16,23 @@
     background-color: transparent;
     padding: 0;
   
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .tab{
+    margin-top: 5%!important;
+  }
+  td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgb(176, 179, 183);
   }
   .brand{
     font-family: 'BioRhyme', serif;
@@ -44,9 +62,6 @@ body{
     height: 100vh;
     background-image: linear-gradient(to bottom right,white,skyblue 120%);
     padding: 2.5% 5%;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: larger;
