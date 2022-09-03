@@ -54,6 +54,10 @@ app.get("/contact",(req,res)=>{
 app.post("/res",(req,res)=>{
     const Sym = req.body.symbol;
     axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=${Sym}&apikey=${apikey}`).then((response)=>{
+        if(Object.keys(response.data)[0]==='Error Message'){
+            res.send("Please enter valid symbol for the company");
+        }
+        else{
         const d = response.data;
         const k = Object.keys(d);
         const l = response.data[k[1]];
@@ -65,7 +69,7 @@ app.post("/res",(req,res)=>{
             vals.push(obj[element]);
         });
     res.render("data",{vals:vals,list:kes});
-    })
+    }});
 })
 
 app.post("/review",(req,res)=>{
@@ -73,9 +77,8 @@ app.post("/review",(req,res)=>{
         name:req.body.name,
         review:req.body.review,
     })
-    if(req.body.name=="" || req.body.review==""){
-        res.send("please fill both the feilds");
-
+    if(req.body.name==" " || req.body.review==" "){
+        res.send("<h1>please fill both the feilds</h1>");
     }
     else{
     rev.save().then((data)=>{

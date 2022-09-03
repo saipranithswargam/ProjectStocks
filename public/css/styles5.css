@@ -75,7 +75,7 @@
     width: 100%;
     justify-content: space-around;
     position: absolute;
-    bottom: 0;
+    bottom: 0.5%;
 
   }
   i{
@@ -115,6 +115,16 @@
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
+}
+.revBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.revBody h1{
+  display: inline-block;
+  font-family: BioRhyme;
+  font-size: xx-large;
 }
 
   @keyframes blink{

@@ -165,8 +165,7 @@ body{
 
 @media (max-width:995px) {
     body{
-        padding: 1.5%;
-
+        padding: 2.5%;
     }
     .intro{
         margin-top: 10%;
